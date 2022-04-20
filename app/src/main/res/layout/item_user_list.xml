@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+        <data>
+                <variable
+                    name="userDeatilsPojo"
+                    type="com.example.userlistapp.pojo.UserDetails" />
+        </data>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/imgAvatar"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="13.33dp"
+                    android:layout_marginRight="13.33dp"
+                    android:layout_marginBottom="13.33dp"
+                    android:src="@drawable/ic_launcher_background"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@id/guideLine1"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="1.0" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideLine1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_begin="100dp" />
+
+
+                <TextView
+                    android:id="@+id/txtUserId"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@{userDeatilsPojo.id}"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="38dp"
+                    android:textSize="18dp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toTopOf="@+id/txtName"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/guideLine1"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+                <TextView
+                    android:id="@+id/txtName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginLeft="38dp"
+                    android:text="@{userDeatilsPojo.name}"
+                    android:textSize="18dp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/guideLine1"
+                    app:layout_constraintTop_toBottomOf="@+id/txtUserId" />
+                <TextView
+                    android:id="@+id/txtEmail"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginLeft="38dp"
+                    android:text="@{userDeatilsPojo.email}"
+                    android:textSize="18dp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/guideLine1"
+                    app:layout_constraintTop_toBottomOf="@+id/txtName" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
